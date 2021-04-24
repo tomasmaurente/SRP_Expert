@@ -1,5 +1,12 @@
 ﻿using System;
 
+/*
+    La clase "Libro" no respeta el patrón SRP ya que tiene dos responsabilidades:
+    1) La de conocer los datos del libro 
+    2) La de conocer su lugar en la biblioteca. 
+    Para solucionarlo implementariamos otra clase "Biblioteca" que se encargue de la resposabilidad de almacenar.
+*/
+
 namespace SRP
 {
     public class Libro

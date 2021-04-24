@@ -11,7 +11,6 @@ namespace SRP
             Libro libro2 = new Libro("Pro C#","Troelsen","001-035");
             libro1.AlmacenarLibro("A","7");
             libro2.AlmacenarLibro("B","3");
-
         }
     }
 }
