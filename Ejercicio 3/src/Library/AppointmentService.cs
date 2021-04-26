@@ -5,49 +5,48 @@ namespace Library
 {
     public class AppointmentService
     {
-        public static string CreateAppointment(string name, string id, string phoneNumber, DateTime date, string appoinmentPlace, string doctorName)
+        private Paciente paciente;
+        public Paciente Paciente {get; }
+        private Doctor doctor;
+        private Doctor Doctor {get; }
+        private int id;
+        public int Id {get; set;}
+        private DateTime date;
+        public DateTime Date {get; set; }
+        private string place; 
+        public string Place
         {
-            StringBuilder stringBuilder = new StringBuilder("Scheduling appointment...\n");
-            Boolean isValid = true;
-
-            if (string.IsNullOrEmpty(name))
+            get
             {
-                stringBuilder.Append("Unable to schedule appointment, Name is required\n");
-                isValid = false;
+                return place;
             }
-
-            if (string.IsNullOrEmpty(id))
+            set
             {
-                stringBuilder.Append("Unable to schedule appointment, id is required\n");
-                isValid = false;
+                if (!string.IsNullOrEmpty(value))
+                {
+                    place = value;
+                }
+                else
+                {
+                    Console.WriteLine("Debe ingresar un lugar valido");
+                }
             }
-
-            if (string.IsNullOrEmpty(phoneNumber))
-            {
-                stringBuilder.Append("Unable to schedule appointment, Phone number is required\n");
-                isValid = false;
-            }
-
-            if (string.IsNullOrEmpty(appoinmentPlace))
-            {
-                stringBuilder.Append("Unable to schedule appointment, Appoinment place is required\n");
-                isValid = false;
-            }
-
-            
-            if (string.IsNullOrEmpty(doctorName))
-            {
-                stringBuilder.Append("Unable to schedule appointment, Doctor name is required\n");
-                isValid = false;
-            }
-
-            if (isValid)
-            {
-                stringBuilder.Append("Appoinment Scheduled");
-            }
-
-            return stringBuilder.ToString();
         }
 
+        private static int contador = 0;
+        public AppointmentService(Paciente paciente, Doctor doctor, string id, DateTime date, string place)
+        {
+            Paciente = paciente;
+            Doctor = doctor;
+            Id = contador;
+            contador++;
+            Date = date;
+            Place = place;
+        }
+
+        public override string ToString()
+        {
+            return Paciente + Doctor + Id + Date + Place;
+        }
     }
 }
