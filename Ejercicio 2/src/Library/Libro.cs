@@ -22,7 +22,6 @@ namespace SRP
         {
             this.SectorBiblioteca = sector;
             this.EstanteBiblioteca = estante;
-        }
-
+        } 
     }
 }
