@@ -21,6 +21,7 @@ namespace Library
                 else
                 {
                     Console.WriteLine("Debe ingresar un nombre valido");
+                    name = "SIN ESPECIFICAR";
                 }
             }
         }
@@ -41,6 +42,7 @@ namespace Library
                 else
                 {
                     Console.WriteLine("Debe ingresar un numero de celular o telefono valido");
+                    phoneNumber = "SIN ESPECIFICAR";
                 }
             }
         }
@@ -61,6 +63,7 @@ namespace Library
                 else
                 {
                     Console.WriteLine("Debe ingresar una edad valida");
+                    age = "SIN ESPECIFICAR";
                 }
             }
         }

@@ -11,39 +11,43 @@ namespace Library
         {
             get
             {
-                return this.name;
+                return name;
             }
             set
             {
                 if (!string.IsNullOrEmpty(value))
                 {
-                    this.name = value;
+                    name = value;
                 }
                 else
                 {
-                    Console.WriteLine("Debe ingresar un nombre");
+                    Console.WriteLine("Debe ingresar un nombre valido");
+                    name = "SIN ESPECIFICAR";
                 }
             }
         }
+
         private string especialidad;
         public string Especialidad 
         {
             get
             {
-                return this.especialidad;
+                return especialidad;
             }
             set
             {
                 if (!string.IsNullOrEmpty(value))
                 {
-                    this.especialidad = value;
+                    especialidad = value;
                 }
                 else
-                {
-                    Console.WriteLine("Debe ingresar una especialidad");
+                { 
+                    Console.WriteLine("Debe ingresar una especialidad valida");
+                    especialidad = "SIN ESPECIFICAR";
                 }
             }
         }
+
         public Doctor(string name, string especialidad)
         {
             Name = name;
