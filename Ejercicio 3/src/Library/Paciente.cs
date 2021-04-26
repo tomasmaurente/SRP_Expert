@@ -1,50 +1,46 @@
 using System;
-using System.Text;
 
 namespace Library
 {
     
     public class Paciente
     {
-        // Variable de clase para asignar Id
-        private static int Contador_id = 0;
-
         private string name;
         public string Name 
         {
             get
             {
-                return this.name;
+                return name;
             }
             set
             {
                 if (!string.IsNullOrEmpty(value))
                 {
-                    this.name = value;
+                    name = value;
                 }
                 else
                 {
-                    Console.WriteLine("Debe ingresar un nombre");
+                    Console.WriteLine("Debe ingresar un nombre valido");
                 }
             }
         }
-
+        
         private string phoneNumber;
         public string PhoneNumber
         {
             get
             {
-                return this.phoneNumber;
+                return phoneNumber;
             }
             set
             {
                 if (!string.IsNullOrEmpty(value))
                 {
-                    this.phoneNumber = value;
+                    phoneNumber = value;
                 }
                 else
                 {
-                    Console.WriteLine("Debe ingresar un numero de celular/telefono");
+                    Console.WriteLine("Debe ingresar un numero de celular o telefono valido");
                 }
             }
         }
@@ -54,7 +50,7 @@ namespace Library
         {
             get
             {
-                return this.age;
+                return age;
             }
             set
             {
@@ -64,24 +60,27 @@ namespace Library
                 }
                 else
                 {
-                    Console.WriteLine("Debe ingresar una edad");
+                    Console.WriteLine("Debe ingresar una edad valida");
                 }
             }
         }
-        
+
         private int id;
-        public int Id 
+        public int Id
         {
             get
             {
-                return this.id;
+                return id;
             }
             set
             {
-                this.id = value;
+                id = value;
             }
         }
 
+        // Variable de clase para asignar Id
+        private static int Contador_id = 0;
+        
         public Paciente (string name, string phoneNumber, string age)
         {
             Name = name;
@@ -93,7 +92,7 @@ namespace Library
 
         public override string ToString()
         {
-            return "El/La paciente "+ Name +", tiene un id de "+Id;
+            return Id +" "+ Name +" "+ Age +" "+ PhoneNumber;
         }
 
     }
