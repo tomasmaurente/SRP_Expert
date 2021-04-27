@@ -4,7 +4,7 @@ namespace Expert_SRP
 {
     public class Alfajor 
     {
-        public Double PrecioDulce {get;set;}
+        public Double PrecioDulce {get; set;}
         public Double PrecioMasa {get; set;}
         public Alfajor(double precioMasa, double precioDulce)
         {
@@ -12,5 +12,10 @@ namespace Expert_SRP
             PrecioMasa = precioMasa;
         }
     
+        public double PrecioAlfajor()
+        {
+            return PrecioDulce + PrecioMasa;
+        }
+
     }
 }
