@@ -18,6 +18,23 @@ namespace Program
 
             Console.WriteLine(app1);
             Console.WriteLine(app2);
+
+            
+
+            /*
+            Se manejan niveles de proteccion (encapsulacion) para que la siguiente asignacion no sea permitida
+            app1.Doctor = doc2;
+            En caso de que se desee poder "setear" el doctor de una instancia de Appointment ya creada
+            Se debe implementar el siguiente metodo en la clase "Appointment"
+            
+            
+            public void CambioDeDoctor(Doctor nuevoDoc)
+            {
+                this.doctor = nuevoDoc;
+            }
+
+            */
+
         }
     }
 }
