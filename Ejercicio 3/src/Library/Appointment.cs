@@ -21,7 +21,7 @@ namespace Library
             }
         }
 
-        public int Id {get; set; }
+        public int Id {get; }
         public DateTime Date {get; set; }
 
         private string place; 

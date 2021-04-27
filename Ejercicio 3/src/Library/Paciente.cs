@@ -65,7 +65,7 @@ namespace Library
             }
         }
 
-        public int Id {get; set; }
+        public int Id {get; }
 
         // Variable de clase para asignar el Id
         private static int contador_id = 0;
