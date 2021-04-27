@@ -15,8 +15,7 @@ namespace SRP
             estante2.AlmacenarLibro(libro2);
 
             Console.WriteLine(libro1);
-            Console.WriteLine(libro1.Ubicacion);
-            Console.WriteLine(libro2.Ubicacion);
+
         }
     }
 }

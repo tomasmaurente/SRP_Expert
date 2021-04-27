@@ -18,7 +18,7 @@ namespace SRP
 
         public override string ToString()
         {
-            return "Titulo: " + Titulo + ", Autor: " + Autor + ", Codigo: " + Codigo + ", Ubicacion: " + Ubicacion;
+            return "Titulo: " + Titulo + ", Autor: " + Autor + ", Codigo: " + Codigo;
         }
     }
 }
