@@ -21,7 +21,6 @@ namespace Library
                 else
                 {
                     Console.WriteLine("Debe ingresar un nombre valido");
-                    name = "SIN ESPECIFICAR";
                 }
             }
         }
@@ -42,7 +41,6 @@ namespace Library
                 else
                 {
                     Console.WriteLine("Debe ingresar un numero de celular o telefono valido");
-                    phoneNumber = "SIN ESPECIFICAR";
                 }
             }
         }
@@ -63,34 +61,23 @@ namespace Library
                 else
                 {
                     Console.WriteLine("Debe ingresar una edad valida");
-                    age = "SIN ESPECIFICAR";
                 }
             }
         }
 
-        private int id;
-        public int Id
-        {
-            get
-            {
-                return id;
-            }
-            set
-            {
-                id = value;
-            }
-        }
+        public int Id {get; set; }
 
-        // Variable de clase para asignar Id
-        private static int Contador_id = 0;
+        // Variable de clase para asignar el Id
+        private static int contador_id = 0;
         
         public Paciente (string name, string phoneNumber, string age)
         {
             Name = name;
             PhoneNumber = phoneNumber;
             Age = age; 
-            Id = Contador_id;
-            Contador_id += 1;
+            
+            Id = contador_id;
+            contador_id += 1;
         }
 
         public override string ToString()

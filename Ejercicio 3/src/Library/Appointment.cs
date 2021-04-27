@@ -4,22 +4,24 @@ namespace Library
 {
     public class Appointment
     {
-        public Paciente Paciente{get; }
-        private Doctor Doctor {get; }
-
-        private int id;
-        public int Id 
+        private Paciente paciente;
+        public string Paciente
         {
             get
             {
-                return id;
+                return paciente.ToString();
             }
-            set
+        }
+        private Doctor doctor;
+        public string Doctor 
+        {
+            get
             {
-                id = value;
+                return doctor.ToString();
             }
         }
 
+        public int Id {get; set; }
         public DateTime Date {get; set; }
 
         private string place; 
@@ -38,26 +40,26 @@ namespace Library
                 else
                 {
                     Console.WriteLine("Debe ingresar un lugar valido");
-                    place = "SIN ESPECIFICAR";
                 }
             }
         }
 
-        private static int contador = 0;
+        private static int contador_id = 0;
 
         public Appointment(Paciente paciente, Doctor doctor, DateTime date, string place)
         {
-            Paciente = paciente;
-            Doctor = doctor;
-            Id = contador;
-            contador++;
+            this.paciente = paciente;
+            this.doctor = doctor;
             Date = date;
             Place = place;
+
+            Id = contador_id;
+            contador_id=+1;
         }
 
         public override string ToString()
         {
-            return Paciente.ToString() + " " + Doctor.ToString() + " " + Id.ToString() + " " + Date + " " + Place;
+            return Paciente + " " + Doctor + " " + Id + " " + Date + " " + Place;
         }
     }
 }

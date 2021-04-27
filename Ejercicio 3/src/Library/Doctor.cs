@@ -22,7 +22,6 @@ namespace Library
                 else
                 {
                     Console.WriteLine("Debe ingresar un nombre valido");
-                    name = "SIN ESPECIFICAR";
                 }
             }
         }
@@ -43,7 +42,6 @@ namespace Library
                 else
                 { 
                     Console.WriteLine("Debe ingresar una especialidad valida");
-                    especialidad = "SIN ESPECIFICAR";
                 }
             }
         }
