@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace SRP
 {
@@ -8,19 +9,25 @@ namespace SRP
 
         public string SectorBiblioteca { get ; set; }
         public string EstanteBiblioteca { get ; set; }
-        public List<Libro> Libros {get ; set;}
+        private List<Libro> libros;
+        public ReadOnlyCollection<Libro> Libros
+        {
+            get
+            {
+                return this.libros.AsReadOnly();
+            }
+        }
 
         public Biblioteca(String sectorBiblioteca, String estanteBiblioteca)
         {
-            this.SectorBiblioteca = sectorBiblioteca;
-            this.EstanteBiblioteca = estanteBiblioteca;
-            this.Libros = new List<Libro> {};
+            SectorBiblioteca = sectorBiblioteca;
+            EstanteBiblioteca = estanteBiblioteca;
+            this.libros = new List<Libro> {};
         }
 
         public void AlmacenarLibro(Libro nuevo)
         {
-            this.Libros.Add(nuevo);
-            nuevo.Ubicacion = this;
+            this.libros.Add(nuevo);
         }
 
         public override string ToString()
