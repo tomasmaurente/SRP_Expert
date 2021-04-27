@@ -2,11 +2,11 @@ using System;
 
 /*
 
-    La clase "Kiosco" no cumple correctamente el patron SRP; 
+    La clase "Kiosco" no cumple correctamente el principio SRP; 
     ya que tiene la responsabilidad de determinar si se puede comprar un alfajor
     y además tiene la responsabilidad de transformar dolares a pesos, en caso de ser necesario.
 
-    Por otro lado, si nos acercamos a la siguiente definicion del patron SRP
+    Por otro lado, si nos acercamos a la siguiente definicion del principio SRP
     "Una clase debe tener solo una razón para cambiar",
     podemos encontrar por ejemplo que si en algun momento cambia la formula de el calculo del precio 
     "a.PrecioDulce + a.PrecioMasa"
