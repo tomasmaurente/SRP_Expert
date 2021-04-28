@@ -12,6 +12,7 @@ using System;
     "a.PrecioDulce + a.PrecioMasa"
     y se toma en cuenta por ejemplo el precio del envoltorio, deberiamos recurrir al metodo "PuedeComprar"
     y alterarlo. 
+    
     Ademas, en caso de que el precio de relacion entre el peso y el dolar se altere 
     deberiamos alterar el metodo "ConvertirAPesos".
     Por lo tanto, observamos dos razones de cambio para una sola clase lo que viola el patron SRP.

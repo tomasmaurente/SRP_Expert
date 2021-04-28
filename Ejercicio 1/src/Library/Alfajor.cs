@@ -2,8 +2,7 @@ using System;
 
 /*
     La clase "Alfajor" cumple correctamente las indicaciones del patron Expert, 
-    asigna la responsabilidad del Constructor al que posee la informacion, las variables de instancia.
-    Si una crítica se puede hacer es que no aprovecha sus beneficios, no matiene encapsulada la clase.
+    asigna la responsabilidad del Constructor al que posee la informacion : las variables de instancia.
 
     El principio SRP se cumple; ya que unicamente tiene la responsabilidad de crear y asignar 
     las variables de instancia.
