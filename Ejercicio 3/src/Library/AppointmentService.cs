@@ -3,10 +3,10 @@ using System.Text;
 
 /*
     Al ingresar todos los valores a una sola clase sucede que si bien funciona, 
-    este es un codigo muy dificil de mantener y actualizar.
+    este es un codigo muy dificil de mantener, actualizar y entender.
     
     El presente codigo no respeta el principio SRP, ya que tiene mas de una razon de cambio: 
-    1)  Agregarle la edad a un paciente.
+    1) Agregarle la edad a un paciente.
     2) Definir la especialidad del doctor.
     3) Crear un ID por consulta.
     4) Crear chequeos nuevos en cada uno de los anteriores puntos.
@@ -15,7 +15,8 @@ using System.Text;
 
     Solucion:
     A la hora de tener que agregarle por ejemplo, la edad al paciente, se tiene que cambiar el 
-    metodo "CreateAppointment", en cambio si se crease una clase paciente, solo se tendia que cambiar dicha clase,
+    metodo "CreateAppointment", en cambio si se crease una clase paciente, solo se tendia que cambiar dicha clase, 
+    asi para:                           PACIENTE DOCTOR Y CITA
     facilitando la comprension del codigo (SRP) y encapsulando la informacion de este (Expert).  
 */
 
