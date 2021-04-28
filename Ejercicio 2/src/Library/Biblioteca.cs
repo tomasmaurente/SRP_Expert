@@ -4,11 +4,34 @@ using System.Collections.ObjectModel;
 
 namespace SRP
 {
-    public class Biblioteca
+    public class Estante
     {
-
-        public string SectorBiblioteca { get ; set; }
-        public string EstanteBiblioteca { get ; set; }
+        private string sectorBiblioteca;
+        public string SectorBiblioteca { 
+            get
+            {
+                return SectorBiblioteca;
+            } 
+            set
+            {
+                if(!String.IsNullOrEmpty(value))
+                {
+                    sectorBiblioteca = value;
+                }
+            }
+        }
+        private string estanteBiblioteca;
+        public string EstanteBiblioteca 
+        {
+            get
+            {
+                return estanteBiblioteca;
+            }
+            set
+            {
+                estanteBiblioteca = value;
+            }
+        }
         private List<Libro> libros;
         public ReadOnlyCollection<Libro> Libros
         {
@@ -18,7 +41,7 @@ namespace SRP
             }
         }
 
-        public Biblioteca(String sectorBiblioteca, String estanteBiblioteca)
+        public Estante(String sectorBiblioteca, String estanteBiblioteca)
         {
             SectorBiblioteca = sectorBiblioteca;
             EstanteBiblioteca = estanteBiblioteca;
