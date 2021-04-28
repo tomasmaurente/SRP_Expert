@@ -4,7 +4,7 @@
     La clase "Libro" no respeta el principio SRP ya que tiene dos responsabilidades:
     1) La de conocer los datos del libro 
     2) La de conocer su lugar en la biblioteca. 
-    Para solucionarlo implementariamos otra clase "Biblioteca" que se encargue de la resposabilidad de almacenar.
+    Para solucionarlo implementariamos otra clase "Estante" que se encargue de la resposabilidad de almacenar.
 */
 
 namespace SRP
